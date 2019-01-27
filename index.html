@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Глейси</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-navigation">
+                <a class="main-header-logo">
+                    <img src="img/index-logo.svg" width="368" height="153" alt="Логотип магазина Глэси">
+                </a>
+                <ul class="site-navigation">
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О Компании</a></li>
+                </ul>
+                <ul class="user-navigation">
+                    <li><a class="search-button">Поиск</a></li>
+                    <li><a class="button">Вход</a></li>
+                    <li><a class="button">Пусто</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="conteiner">
+            <h1 class="visually-hidden">Магазин мороженого Глэси</h1>
+            <!-- Здесь будут слайды -->
+            <section>
+                <h2 class="visually-hidden">Преимущества</h2>
+                <p class="fuatures">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+                <ul class="fuatures-list">
+                    <li class="feature-item">
+                        <!--Нужен ли тут h3 visually-hidden?-->
+                        <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+                    </li>
+                    <li class="feature-item">
+                        <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                    </li>
+                    <li class="feature-item">
+                        <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                    </li>
+                    <li class="feature-item">
+                        <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                    </li>
+                </ul>
+            </section>
+            <article class="blog">
+                <h2 class="visually-hidden">Новости блога</h2>
+                <p>Новое в нашем блоге</p>
+                <h3 class="blog-item">
+                    <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                </h3>
+            </article>
+            <section class="mailing">
+                <h2 class="visually-hidden">Рассылка</h2>
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                <!--Здесь будет форма и кнопка-->
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+            </section>
+            <section class="map">
+                <!--Здесь будет карта-->
+            </section>
+        </main>
+        <footer class='main-footer'>
+            <ul class="footer-social">
+                <li><a class="social-button" href="#">Твиттер</a></li>
+                <li><a class="social-button" href="#">Инстаграм</a></li>
+                <li><a class="social-button" href="#">Фейсбук</a></li>
+                <li><a class="social-button" href="#">Вконтакте</a></li>
+            </ul>
+            <ul class="footer-docs">
+                <!--Где-то тут должно быть сердечко-->
+                <li><a class="footer-docs-item" href="#">Для поставщиков</a></li>
+                <li><a class="footer-docs-item" href="#">О производстве</a></li>
+                <li><a class="footer-docs-item" href="#">Наши документы</a></li>
+                <li><a class="footer-docs-item" href="#">Экологические стандарты</a></li>
+            </ul>
+            <div class="footer-copyright">
+                <a class="footer-copyright-logo" href="https://htmlacademy.ru">
+                    <img src="img/html-logo.svg" width="109" height="38" alt="Логотип HTMLacademy">
+                </a>
+                <p>Сделано в HTML Academy © 2019</p>
+            </div>
+        </footer>
+    </body>
 </html>
