@@ -26,10 +26,95 @@
         </header>
         <main class="conteiner">
             <h1 class="visually-hidden">Магазин мороженого Глэси</h1>
+            <span class="slides">Слайды</span>
             <!-- Здесь будут слайды -->
-            <section>
+            <section class="banners">
+                <h2 class="visually=hidden">Банеры</h2>
+                <ul class="banners-list">
+                    <li class="banners-list-item">
+                        <h3>Малинка даром!</h3><!--или тут дожно быть <b>?-->
+                        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                        <a class="button" href="#">Хочу варенье!</a>
+                    </li>
+                    <li class="banners-list-item">
+                        <h3>Шоколадки даром!!</h3>
+                        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                        <a class="button" href="#">Хочу шоколадки!</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="hits">
+                <h2 class="visually-hidden">Хиты</h2>
+                <ul class="hits-list">
+                    <li class="hits-item">
+                        <h3>
+                            <a class="hits-item-title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                        </h3>
+                        <p><!--Нужен ди тут и в аналагичном каталоге параграф?-->
+                            <a href="#">
+                                <img src="img/hit-product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                            </a>
+                        </p>
+                        <p class="hits-item-price">
+                            <a href="#">
+                                <b>310Р</b>/кг
+                            </a>
+                        </p>
+                        <span class="hit-label">Хит</span><!--В задании сказано все не понятное отмечать спаном-->
+                    </li>
+                    <li class="hits-item">
+                        <h3>
+                            <a class="hits-item-title" href="#">Сливочно-кофейное с кусочками шоколада</a>
+                        </h3>
+                        <p>
+                            <a href="#">
+                                <img src="img/hit-product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                            </a>
+                        </p>
+                        <p class="hits-item-price">
+                            <a href="#">
+                                <b>380Р</b>/кг
+                            </a>
+                        </p>
+                        <span class="hit-label">Хит</span>
+                    </li>
+                    <li class="hits-item">
+                        <h3>
+                            <a class="hits-item-title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                        </h3>
+                        <p>
+                            <a href="#">
+                                <img src="img/hit-product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                            </a>
+                        </p>
+                        <p class="hits-item-price">
+                            <a href="#">
+                                <b>355Р</b>/кг
+                            </a>
+                        </p>
+                        <span class="hit-label">Хит</span>
+                    </li>
+                    <li class="hits-item">
+                        <h3>
+                            <a class="hits-item-title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                        </h3>
+                        <p>
+                            <a href="#">
+                                <img src="img/hit-product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                            </a>
+                        </p>
+                        <p class="hits-item-price">
+                            <a href="#">
+                                <b>415Р</b>/кг
+                            </a>
+                        </p>
+                        <span class="hit-label">Хит</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="features">
                 <h2 class="visually-hidden">Преимущества</h2>
-                <p class="fuatures">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+                <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                 <ul class="fuatures-list">
                     <li class="feature-item">
                         Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
@@ -61,6 +146,14 @@
             <section class="map">
                 <h2 class="visually-hidden">Карта</h2>
                 <!--Здесь будет карта-->
+                <section class="map-address"><!--Вроде секшн внутри секшн легитимен?-->
+                    <h3 class="visually-hidden">Адресный блок</h3>
+                    <p>Адрес главного офиса и офлайн-магазина:</p>
+                    <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p><!--Есть ли тут альтернатива br кроме p?-->
+                    <p>Для заказов по телефону:</p>
+                    <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
+                    <a class="button">Форма обратной связи</a>
+                </section>
             </section>
         </main>
         <footer class='main-footer'>
