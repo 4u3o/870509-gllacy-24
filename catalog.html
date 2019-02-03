@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header">
@@ -12,15 +13,96 @@
                 </a>
                 <ul class="site-navigation">
                     <!--Здесь будет нажатая кнопка-->
-                    <li><a class="button" href="catalog.html">Каталог</a></li>
+                    <li>
+                        <section class="catalog-sorts">
+                            <h2 class="visually-hidden">Каталог мороженого</h2>
+                            <a href="catalog.html">Каталог</a>
+                            <ul class="catalog-sorts-list">
+                                <li>
+                                    <a class="sorts-item" href="#"><b>Новинки</b></a>
+                                </li>
+                                <li>
+                                    <a class="sorts-item" href="#">Сливочное</a>
+                                </li>
+                                <li>
+                                    <a class="sorts-item" href="#">Щербеты</a>
+                                </li>
+                                <li>
+                                    <a class="sorts-item" href="#">Фруктовый лед</a>
+                                </li>
+                                <li>
+                                    <a class="sorts-item" href="#">Мелорин</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </li>
                     <li><a href="#">Доставка и оплата</a></li>
                     <li><a href="#">О Компании</a></li>
                 </ul>
             </nav>
             <div class="user-navigation">
-                <a class="user-navigation-search">Поиск</a>
-                <a class="user-navigation-login">Вход</a>
-                <a class="user-navigation-basket">Пусто</a>
+                <div class="search">
+                    <a class="user-search" href="#">Поиск</a>
+                    <form class="user-search-form" action="https://echo.htmlacademy.ru" method="post">
+                        <label class="visually-hidden" for="user-navigation-search">Поиск</label>
+                        <input type="text" name="user-navigation-search" placeholder="Что ищем?" id="user-navigation-search">
+                    </form>
+                </div>
+                <section class="login">
+                    <h2 class="visually-hidden">Вход в личный кабинет</h2>
+                    <a class="user-login" href="#">Вход</a>
+                    <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label class="visually-hidden" for="user-email">Логин</label>
+                            <input class="login-icon-email" type="email" name="user-email" placeholder="Электронная почта" id="user-email">
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="user-password">Пароль</label>
+                            <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
+                        </p>
+                        <p class="login-password-info">
+                            <a class="restore" href="#">Забыли пароль?</a>
+                            <a class="new-iser" href="#">Новая регистрация</a>
+                        </p>
+                        <button class="button" type="submit">
+                            Войти
+                        </button>
+                    </form>
+                </section>
+                <section class="user-basket">
+                    <h2 class="visually-hidden">Товары в корзине</h2>
+                    <a class="user-basket" href="#">Корзина</a>
+                    <ol class="basket-list">
+                        <li>
+                            <div class="basket-item">
+                                <h3>Пломбир с апельсиновым джемом</h3>
+                                <div class="basket-price">
+                                    <!--тут наверное джаваскрипт считает-->
+                                    <span>1,5 кг х 200 руб.</span>
+                                    <span>300 руб.</span>
+                                </div>
+                                <button class="basket-delete" type="button">Удалить</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="basket-item">
+                                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+                                <div class="basket-price">
+                                    <!--тут наверное джаваскрипт считает-->
+                                    <span>1,5 кг х 300 руб.</span>
+                                    <span>450 руб.</span>
+                                </div>
+                                <button class="basket-delete" type="button">Удалить</button>
+                            </div>
+                        </li>
+                    </ol>
+                    <div class="basket-footer">
+                        <p>Итого:
+                            <span class="basket-footer-price">750р.</span>
+                        </p>
+                        <a class="button" href="#">Оформить заказ</a>
+                    </div>
+                </section>
             </div>
             <p class="work-time">С 10 до 20, ежедневно</p>
             <p class="phone-number">8 812 450-25-25</p>
@@ -34,7 +116,7 @@
             </ul>
             <section class="filters">
                 <h2 class="visually-hidden">Фильтр товаров</h2>
-                <!--Тут будет форма с фильтрами-->
+                <!--Фильтры в основном задании не размечаются-->
                 <ul class="filters-list">
                     <li class="filters-item">Сортировка:
                         <span class="selector">по популярности</span>
