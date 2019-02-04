@@ -45,7 +45,7 @@
                     <a class="user-search" href="#">Поиск</a>
                     <form class="user-search-form" action="https://echo.htmlacademy.ru" method="post">
                         <label class="visually-hidden" for="user-navigation-search">Поиск</label>
-                        <input type="text" name="user-navigation-search" placeholder="Что ищем?" id="user-navigation-search">
+                        <input id="user-navigation-search" type="text" name="user-navigation-search" placeholder="Что ищем?">
                     </form>
                 </div>
                 <section class="login">
@@ -54,11 +54,11 @@
                     <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
                         <p>
                             <label class="visually-hidden" for="user-email">Логин</label>
-                            <input class="login-icon-email" type="email" name="user-email" placeholder="Электронная почта" id="user-email">
+                            <input class="login-icon-email" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
                         </p>
                         <p>
                             <label class="visually-hidden" for="user-password">Пароль</label>
-                            <input class="login-icon-password" type="password" name="password" placeholder="Пароль" id="user-password">
+                            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
                         </p>
                         <p class="login-password-info">
                             <a class="restore" href="#">Забыли пароль?</a>
@@ -76,23 +76,23 @@
                         <li>
                             <div class="basket-item">
                                 <h3>Пломбир с апельсиновым джемом</h3>
+                                <img src="img/mini_basket_1.jpg" alt="Пломбир с апельсиновым джемом">
                                 <div class="basket-price">
-                                    <!--тут наверное джаваскрипт считает-->
                                     <span>1,5 кг х 200 руб.</span>
                                     <span>300 руб.</span>
                                 </div>
-                                <button class="basket-delete" type="button">Удалить</button>
+                                <a class="basket-delete" href="catalog.html">Удалить</a>
                             </div>
                         </li>
                         <li>
                             <div class="basket-item">
                                 <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
                                 <div class="basket-price">
-                                    <!--тут наверное джаваскрипт считает-->
+                                    <img src="img/mini_basket_2.jpg" alt="Клубничный пломбир с присыпкой">
                                     <span>1,5 кг х 300 руб.</span>
                                     <span>450 руб.</span>
                                 </div>
-                                <button class="basket-delete" type="button">Удалить</button>
+                                <a class="basket-delete" href="catalog.html">Удалить</a>
                             </div>
                         </li>
                     </ol>
