@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -134,14 +136,24 @@
                     </fieldset>
                     <fieldset>
                         <legend>Жирность:</legend>
-                        <input class="filters-radio" id="zerofat" type="radio" name="fatradio" value="0%">
-                        <label class="filters-label" for="zerofat">0%</label>
-                        <input class="filters-radio" id="upten" type="radio" name="fatradio" value="до 10%" checked>
-                        <label class="filters-label" for="upten">до 10%</label>
-                        <input class="filters-radio" id="upthirty" type="radio" name="fatradio" value="до 30%">
-                        <label class="filters-label" for="upthirty">до 30%</label>
-                        <input class="filters-radio" id="afterthirty" type="radio" name="fatradio" value="выше 30%">
-                        <label class="filters-label" for="afterthirty">выше 30%</label>
+                        <ul>
+                            <li>
+                                <input class="filters-radio" id="zerofat" type="radio" name="fatradio" value="0%">
+                                <label class="filters-label" for="zerofat">0%</label>
+                            </li>
+                            <li>
+                                <input class="filters-radio" id="upten" type="radio" name="fatradio" value="до 10%" checked>
+                                <label class="filters-label" for="upten">до 10%</label>
+                            </li>
+                            <li>
+                                <input class="filters-radio" id="upthirty" type="radio" name="fatradio" value="до 30%">
+                                <label class="filters-label" for="upthirty">до 30%</label>
+                            </li>
+                            <li>
+                                <input class="filters-radio" id="afterthirty" type="radio" name="fatradio" value="выше 30%">
+                                <label class="filters-label" for="afterthirty">выше 30%</label>
+                            </li>
+                        </ul>
                     </fieldset>
                     <fieldset>
                         <legend>Наполнители:</legend>

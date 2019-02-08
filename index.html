@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
@@ -41,7 +43,7 @@
             </nav>
             <div class="user-navigation">
                 <div class="search">
-                    <a class="user-search" href="#">Поиск</a>
+                    <a class="user-search" area-label="Поиск" href="#"></a>
                     <form class="user-search-form" action="https://echo.htmlacademy.ru" method="post">
                         <label class="visually-hidden" for="user-navigation-search">Поиск</label>
                         <input id="user-navigation-search" type="text" name="user-navigation-search" placeholder="Что ищем?">
@@ -49,7 +51,7 @@
                 </div>
                 <section class="login">
                     <h2 class="visually-hidden">Вход в личный кабинет</h2>
-                    <a class="user-login" href="#">Вход</a>
+                    <a class="navigation-button user-login" href="#">Вход</a>
                     <form class="login_form" action="https://echo.htmlacademy.ru" method="post">
                         <p>
                             <label class="visually-hidden" for="user-email">Логин</label>
@@ -59,24 +61,48 @@
                             <label class="visually-hidden" for="user-password">Пароль</label>
                             <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
                         </p>
-                        <p class="login-password-info">
-                            <a class="restore" href="#">Забыли пароль?</a>
-                            <a class="new-iser" href="#">Новая регистрация</a>
-                        </p>
+                        <ul class="login-password-info">
+                            <li>
+                                <a class="restore" href="#">Забыли пароль?</a>
+                            </li>
+                            <li>
+                                <a class="new-iser" href="#">Новая регистрация</a>
+                            </li>
+                        </ul>
                         <button class="button" type="submit">
                             Войти
                         </button>
                     </form>
                 </section>
-                <a class="user-basket" href="#">Корзина</a>
+                <a class="navigation-button user-basket" href="#">Корзина</a>
             </div>
-            <p class="work-time">С 10 до 20, ежедневно</p>
-            <p class="phone-number">8 812 450-25-25</p>
+            <div class="header-info">
+                <p class="work-time">С 10 до 20, ежедневно</p>
+                <p class="phone-number">8 812 450-25-25</p>
+            </div>
         </header>
         <main class="conteiner">
             <h1 class="visually-hidden">Магазин мороженого Глэси</h1>
-            <span class="slides">Слайды</span>
-            <!-- Здесь будут слайды -->
+            <section class="slides">
+                <h2 class="visually-hidden">Слайды товаров</h2>
+                <ul class="slides-switches">
+                    <li class="slide-radio">
+                        <button class="slide-btn">
+                            Первый слайд
+                        </button>
+                    </li>
+                    <li class="slide-radio">
+                        <button class="slide-btn">
+                            Второй слайд
+                        </button>
+                    </li>
+                    <li class="slide-radio">
+                        <button class="slide-btn">
+                            Третий слайд
+                        </button>
+                    </li>
+                </ul>
+            </section>
             <section class="banners">
                 <h2 class="visually=hidden">Банеры</h2>
                 <ul class="banners-list">
@@ -101,7 +127,7 @@
                         </h3>
                         <p>
                             <a href="#">
-                                <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                                <img class="product-image" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                             </a>
                         </p>
                         <p class="catalog-item-price">
@@ -109,7 +135,6 @@
                                 <b>310₽</b>/кг
                             </a>
                         </p>
-                        <span class="catalog-item-label">Хит</span>
                     </li>
                     <li class="catalog-item">
                         <h3>
@@ -117,7 +142,7 @@
                         </h3>
                         <p>
                             <a href="#">
-                                <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                                <img class="product-image" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                             </a>
                         </p>
                         <p class="catalog-item-price">
@@ -125,7 +150,6 @@
                                 <b>380₽</b>/кг
                             </a>
                         </p>
-                        <span class="catalog-item-label">Хит</span>
                     </li>
                     <li class="catalog-item">
                         <h3>
@@ -133,7 +157,7 @@
                         </h3>
                         <p>
                             <a href="#">
-                                <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                                <img class="product-image" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                             </a>
                         </p>
                         <p class="catalog-item-price">
@@ -141,7 +165,6 @@
                                 <b>355₽</b>/кг
                             </a>
                         </p>
-                        <span class="catalog-item-label">Хит</span>
                     </li>
                     <li class="catalog-item">
                         <h3>
@@ -149,7 +172,7 @@
                         </h3>
                         <p>
                             <a href="#">
-                                <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                                <img class="product-image" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                             </a>
                         </p>
                         <p class="catalog-item-price">
@@ -157,7 +180,6 @@
                                 <b>415₽</b>/кг
                             </a>
                         </p>
-                        <span class="catalog-item-label">Хит</span>
                     </li>
                 </ul>
             </section>
@@ -183,18 +205,21 @@
                 <h2 class="visually-hidden">Новости блога</h2>
                 <p>Новое в нашем блоге</p>
                 <h3 class="blog-item">
-                    <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                    <a href="#">10 способов сервировки
+                        фруктовых щербетов к
+                        столу</a>
                 </h3>
             </article>
             <section class="mailing">
-                <h2 class="visually-hidden">Рассылка</h2>
-                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <form class="mailing-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="post">
+                    <h2 class="visually-hidden">Рассылка</h2>
+                    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                    <form class="mailing-form" action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="mailing-email">Адрес электронной почты</label>
                     <input id="mailing-email" type="email" name="mailing-email" placeholder="Электронная почта">
                     <button class="button" type="submit">Отправить</button>
                 </form>
-
+                </div>
             </section>
             <section class="address">
                 <h2 class="visually-hidden">Карта</h2>
@@ -205,30 +230,28 @@
                     <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p><!--Есть ли тут альтернатива br кроме p?-->
                     <p>Для заказов по телефону:</p>
                     <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-                    <button type="button">Форма обратной связи</button>
+                    <button class="button" type="button">Форма обратной связи</button>
                 </div>
             </section>
         </main>
         <footer class='main-footer'>
             <ul class="footer-social">
                 <li>
-                    <a class="social-button" href="#">
-                        Твиттер
+                    <a class="social-button twitter" aria-label="Твиттер" href="#">
                     </a>
                 </li>
                 <li>
-                    <a class="social-button" href="#">
-                        Инстаграм
+                    <a class="social-button instagram" aria-label="Инстаграм" href="#">
                     </a>
                 </li>
                 <li>
-                    <a class="social-button" href="#">
-                        Фейсбук
+                    <a class="social-button facebook" aria-label="Фейсбук" href="#">
+
                     </a>
                 </li>
                 <li>
-                    <a class="social-button" href="#">
-                        Вконтакте
+                    <a class="social-button vk" aria-label="Вконтакте" href="#">
+
                     </a>
                 </li>
             </ul>
