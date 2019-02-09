@@ -26,7 +26,7 @@ body {
 
 .site-navigation a,
 .catalog-item a {
-    color: #ffffff; a
+    color: #ffffff;
 }
 
 .site-navigation a:hover {
@@ -110,9 +110,9 @@ a:active {
 .navigation-button {
     height: auto;
     width: auto;
-    border-radius: 17px;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.2);
+    border-radius: 100px;
+    padding: 10px 10px 10px 30px;
+    background-color: #a1b4a9;
 
     font-size: 14px;
     font-weight: 500;
@@ -126,8 +126,8 @@ a:active {
 .navigation-button:hover {
     height: auto;
     width: auto;
-    border-radius: 17px;
-    padding: 10px;
+    border-radius: 100px;
+    padding: 10px 10px 10px 30px;
     background-color: #f8f7f4;
 
     font-size: 14px;
@@ -457,13 +457,11 @@ li .social-button {
     background-position: center;
     background-size: 17px auto;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: #a1b4a9;
 
 }
 
-.user-search {
-    display: block;
-}
+
 
 .search a {
     display: block;
