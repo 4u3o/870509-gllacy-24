@@ -56,27 +56,29 @@ body {
     color: #333333;
 }
 
+a:hover,
+a:active {
+    color: #ffbc9e;
+}
 
-.catalog-sorts a,
-.user-navigation a {
+.catalog-sorts a {
     text-decoration: none;
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
+    color: #323232;
 }
 
 .catalog-sorts a:hover {
     background-color: #fbded8;
     border-radius: 0;
+    color: #323232;
 }
 
 .catalog-sorts a:active {
     background-color: #f6b5a5;
     border-radius: 0;
     box-shadow: 0 0;
-}
-
-.catalog-sorts a {
     color: #323232;
 }
 
@@ -88,6 +90,16 @@ body {
   border-radius: 5px;
 }
 
+.catalog-item {
+    padding: 10px;
+    display: inline-block;
+}
+
+.catalog-item:hover{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    background-color: #9bafa3;
+    border-radius: 5px;
+}
 
 .main-navigation {
     font-weight: 700;
@@ -96,7 +108,7 @@ body {
 }
 
 .navigation-button {
-    height: 34px;
+    height: auto;
     width: auto;
     border-radius: 17px;
     padding: 10px;
@@ -105,13 +117,14 @@ body {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
+    text-decoration: none;
     color: #ffffff;
 
     display: inline-block;
 }
 
 .navigation-button:hover {
-    height: 34px;
+    height: auto;
     width: auto;
     border-radius: 17px;
     padding: 10px;
@@ -124,6 +137,11 @@ body {
     color: #323232;
 
     display: inline-block;
+}
+
+.login-form a:hover,
+.login-form a:active {
+    color: #e84d37;
 }
 
 .work-time {
@@ -400,18 +418,26 @@ li .social-button {
     font-size: 13px;
     line-height: 18px;
     color: #ffffff;
+    padding-left: 20px;
+    position: relative;
 }
 
-.footer-docs li:first-child::before {
+.footer-docs-item b {
+    font-weight: 700;
+}
+
+.footer-docs b::before {
     content: "";
     position: absolute;
+
     width: 15px;
     height: 13px;
     background-image: url("../img/icon_heart.svg");
     background-repeat: no-repeat;
     background-size: 15px 13px;
 
-    background-position-y: center;
+    top: 2px;
+    left: 1px;
 }
 
 .footer-copyright a {
@@ -453,6 +479,13 @@ li .social-button {
     border-radius: 50%;
 }
 
+.user-login {
+    padding-left: 30px;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
 .user-login::before {
     content: "";
     position: absolute;
@@ -462,7 +495,14 @@ li .social-button {
     background-repeat: no-repeat;
     background-size: 21px 19px;
 
-    background-position-y: center;
+    left: 5px;
+}
+
+.user-basket {
+    padding-left: 30px;
+    position: relative;
+    width: auto;
+    height: auto;
 }
 
 .user-basket::before {
@@ -474,7 +514,7 @@ li .social-button {
     background-repeat: no-repeat;
     background-size: 21px 19px;
 
-    background-position-y: center;
+    left: 5px;
 }
 
 .user-search-form {
@@ -486,7 +526,7 @@ li .social-button {
     background-color: #f8f7f4;
 }
 
-.login_form {
+.login-form {
     width: 241px;
     height: 174px;
     padding: 20px 17px 20px 19px;
@@ -520,7 +560,7 @@ li .social-button {
 
 
 .feedback-form input,
-.login_form input,
+.login-form input,
 .user-search-form input,
 .mailing-form input {
     background-color: #ffffff;
@@ -529,17 +569,18 @@ li .social-button {
 }
 
 .feedback-form input:hover,
-.login_form input:hover,
+.login-form input:hover,
 .user-search-form input:hover,
 .mailing-form input:hover {
-    border: inside 2px solid rgba(154, 154, 154, 0.52);
+    border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .feedback-form input:focus,
-.login_form input:focus,
+.login-form input:focus,
 .user-search-form input:focus,
 .mailing-form input:focus {
-    border: inside 2px solid rgba(46, 136, 228, 0.52);
+    border: 2px solid rgba(46, 136, 228, 0.52);
+    outline: none;
 }
 
 .feedback-form input[type="text"],
@@ -549,15 +590,19 @@ li .social-button {
     font-weight: 400;
     line-height: 18px;
     color: #999999;
+
+    padding-left: 15px;
 }
 
-.login_form input[type="email"],
-.login_form input[type="password"],
+.login-form input[type="email"],
+.login-form input[type="password"],
 .user-search-form input[type="text"] {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color: #999999;
+
+    padding-left: 15px;
 }
 
 .mailing-form input[type="email"] {
@@ -565,6 +610,8 @@ li .social-button {
     font-weight: 400;
     line-height: 24px;
     color: #999999;
+
+    padding-left: 15px;
 }
 
 .feedback-form-text {
@@ -573,6 +620,8 @@ li .social-button {
     background-color: #ffffff;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
+
+    padding-left: 15px;
 }
 
 
@@ -580,27 +629,37 @@ li .social-button {
 
 .button {
     width: auto;
-    height: 44px;
+    height: auto;
     box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
     background-image: linear-gradient(to top, #e74a35, #f26843);
     border-radius: 22px;
+    padding: 10px;
 
     color: #ffffff;
     text-decoration: none;
+
+    vertical-align: middle;
     white-space: nowrap;
     border: none;
+
+    display: inline-block;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
     box-shadow: 0px 2px 2px 0 #ac1000;
-    background-image: linear-gradient(to top, #e74a35, #f26843), linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    background-image: linear-gradient(to top, #f48568, #ec6f5e);
     border: none;
+    color: #ffffff;
+}
+
+.button:focus {
+    outline: none;
 }
 
 .button:active {
     box-shadow: inset 0px 2px 2px 0 #942718;
     background-image: linear-gradient(to bottom, #e74a35, #f26843), linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+    opacity: 1;
     border: none;
 }
 
@@ -611,6 +670,6 @@ li .social-button {
     margin: -1px;
     border: 0;
     padding: 0;
-    clip: rect (0 0 0 0);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
