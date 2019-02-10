@@ -318,7 +318,6 @@ a:active {
 
 .mailing {
     width: 560px;
-    height: 220px;
     color: #5a5a5a;
     padding: 5px;
 
@@ -329,8 +328,7 @@ a:active {
 }
 
 .post {
-    width: auto;
-    height: 155px;
+    
     padding: 30px 20px;
 
     background-color:#f8f7f4;
