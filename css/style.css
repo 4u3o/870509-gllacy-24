@@ -553,7 +553,7 @@ a:active {
 .user-search-form input,
 .mailing-form input {
     background-color: #ffffff;
-    border: inside 1px solid rgba(178, 178, 178, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
 }
 
