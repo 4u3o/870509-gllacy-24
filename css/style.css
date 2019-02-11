@@ -99,6 +99,7 @@ a:active,
 
 .catalog-item {
     padding: 10px;
+    width: 280px;
     display: inline-block;
 }
 
@@ -654,7 +655,8 @@ a:active,
     border-radius: 50%;
 }
 
-.pagination-list li {
+.pagination-list li,
+.breadcrumbs li {
     list-style: none;
     display: inline-block;
 }
