@@ -17,7 +17,7 @@
                     <li>
                         <section class="catalog">
                             <h2 class="visually-hidden">Каталог мороженого</h2>
-                            <a href="catalog.html">Каталог</a>
+                            <a class="navigation-item" href="catalog.html">Каталог</a>
                             <ul class="catalog-sorts">
                                 <li>
                                     <a class="catalog-list-sort" href="#"><b>Новинки</b></a>
@@ -37,8 +37,8 @@
                             </ul>
                         </section>
                     </li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">О Компании</a></li>
+                    <li><a class="navigation-item" href="#">Доставка и оплата</a></li>
+                    <li><a class="navigation-item" href="#">О Компании</a></li>
                 </ul>
             </nav>
             <div class="user-navigation">
@@ -79,33 +79,35 @@
                 <section class="user-basket">
                     <h2 class="visually-hidden">Товары в корзине</h2>
                     <a class="navigation-button user-basket" href="#">Корзина</a>
-                    <ol class="basket-list">
-                        <li>
-                            <div class="basket-item">
-                                <h3>Пломбир с апельсиновым джемом</h3>
-                                <div class="basket-price">
-                                    <img src="img/mini_basket_1.jpg" alt="Пломбир с апельсиновым джемом">
-                                    1,5 кг х <span>200 руб.</span> 300 руб.
+                    <div class="mini-basket">
+                        <ol class="basket-list">
+                            <li>
+                                <div class="basket-item">
+                                    <h3>Пломбир с апельсиновым джемом</h3>
+                                    <div class="basket-price">
+                                        <img src="img/mini_basket_1.jpg" alt="Пломбир с апельсиновым джемом">
+                                        1,5 кг х <span>200 руб.</span> 300 руб.
+                                    </div>
+                                    <a class="basket-delete" href="catalog.html">Удалить</a>
                                 </div>
-                                <a class="basket-delete" href="catalog.html">Удалить</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="basket-item">
-                                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                                <div class="basket-price">
-                                    <img src="img/mini_basket_2.jpg" alt="Клубничный пломбир с присыпкой">
-                                    1,5 кг х <span>300 руб.</span>450 руб.
+                            </li>
+                            <li>
+                                <div class="basket-item">
+                                    <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+                                    <div class="basket-price">
+                                        <img src="img/mini_basket_2.jpg" alt="Клубничный пломбир с присыпкой">
+                                        1,5 кг х <span>300 руб.</span>450 руб.
+                                    </div>
+                                    <a class="basket-delete" href="catalog.html">Удалить</a>
                                 </div>
-                                <a class="basket-delete" href="catalog.html">Удалить</a>
-                            </div>
-                        </li>
-                    </ol>
-                    <div class="basket-footer">
-                        <p>Итого:
-                            <span class="basket-footer-price">750р.</span>
-                        </p>
-                        <a class="button" href="#">Оформить заказ</a>
+                            </li>
+                        </ol>
+                        <div class="basket-footer">
+                            <p>Итого:
+                                <span class="basket-footer-price">750р.</span>
+                            </p>
+                            <a class="button" href="#">Оформить заказ</a>
+                        </div>
                     </div>
                 </section>
             </div>
