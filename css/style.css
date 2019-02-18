@@ -156,7 +156,12 @@ a:active,
 
 .navigation-item {
     display: inline-block;
+    position: relative;
     padding: 10px;
+}
+
+.navigation-catalog .navigation-item:hover ~ .catalog-sorts {
+    display: block;
 }
 
 .navigation-item.active {
@@ -202,6 +207,8 @@ a:active,
 }
 
 .catalog-sorts {
+    display: none;
+    position: absolute;
     width: 143px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
@@ -317,10 +324,12 @@ a:active,
 
 .catalog-list-sort {
     display: block;
+    padding: 0 20px;
 }
 
 .mini-basket {
     display: none;
+    position: absolute;
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
@@ -714,7 +723,13 @@ a:active,
     left: 5px;
 }
 
+.user-search:hover ~ .user-search-form {
+    display: block;
+}
+
 .user-search-form {
+    display: none;
+    position: absolute;
     width: 300px;
     padding: 20px 15px;
     border-radius: 5px;
@@ -723,11 +738,17 @@ a:active,
 }
 
 .login-form {
+    position: absolute;
+    display: none;
     width: 241px;
     padding: 20px 17px 20px 19px;
     border-radius: 5.1px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
+}
+
+.user-login:hover ~ .login-form {
+    display: block;
 }
 
 .login-password-info a {
