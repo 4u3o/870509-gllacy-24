@@ -11,32 +11,11 @@ body {
     line-height: 22px;
     font-weight: 400;
     color: #ffffff;
-
-    background-color: #849d8f;
-    background-position: top center;
-    background-repeat: no-repeat;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
-body > * {
-    background-color: rgba(0, 0, 255, 0.2);
-}
-
-body > * > * {
-    background-color: rgba(0, 0, 255, 0.2);
-}
-
-body > * > * > * {
-    background-color: rgba(0, 0, 255, 0.2);
-}
-
-body > * > * > * > * {
-    background-color: rgba(0, 0, 255, 0.2);
-}
-
 
 .site-navigation,
 .banners-list,
@@ -64,8 +43,9 @@ body > * > * > * > * {
 }
 
 .main-wrapper {
-    width: 1146px;
-    margin: 0 auto;
+    background-color: #849d8f;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .container,
