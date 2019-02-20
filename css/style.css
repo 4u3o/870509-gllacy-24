@@ -879,15 +879,15 @@ a:active,
     width: 26px;
     height: 26px;
     text-align: center;
-
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
 }
+
+
 
 .pagination-item.pagination-item-current {
     background-color: #ffffff;
     border-radius: 50%;
+    line-height: 26px;
+    vertical-align: center;
 
     color: #323232;
 }
@@ -895,11 +895,11 @@ a:active,
 .pagination-list a {
     width: 26px;
     height: 26px;
-    text-align: center;
     display: inline-block;
 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 26px;
+    vertical-align: center;
     font-weight: 500;
     color: #ffffff;
     text-decoration: none;
