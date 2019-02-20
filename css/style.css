@@ -879,6 +879,8 @@ a:active,
     width: 26px;
     height: 26px;
     text-align: center;
+    line-height: 26px;
+    vertical-align: middle;
 }
 
 
@@ -886,8 +888,6 @@ a:active,
 .pagination-item.pagination-item-current {
     background-color: #ffffff;
     border-radius: 50%;
-    line-height: 26px;
-    vertical-align: center;
 
     color: #323232;
 }
@@ -898,8 +898,6 @@ a:active,
     display: inline-block;
 
     font-size: 16px;
-    line-height: 26px;
-    vertical-align: center;
     font-weight: 500;
     color: #ffffff;
     text-decoration: none;
@@ -910,6 +908,38 @@ a:active,
     border-radius: 50%;
 }
 
+.prev {
+    margin-right: 15px;
+    position: relative;
+}
+
+.prev::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    transform: scale(-1, 1);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.next {
+    margin-left: 15px;
+    position: relative;
+}
+
+.next::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/icon-left.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
 
 .button {
     width: auto;
