@@ -925,6 +925,10 @@ a:active,
     right: 10px;
 }
 
+.prev.disabled {
+    opacity: 0.3;
+}
+
 .next {
     margin-left: 15px;
     position: relative;
