@@ -8,8 +8,11 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <input class="visually-hidden" id="slide-1" type="radio" name="sliderradio" value="1" checked>
+        <input class="visually-hidden" id="slide-2" type="radio" name="sliderradio" value="2">
+        <input class="visually-hidden" id="slide-3" type="radio" name="sliderradio" value="3">
         <div class="main-wrapper">
-            <header class="main-header">
+            <header class="main-header container">
                 <div class="header-container">
                     <nav class="main-navigation">
                         <a class="main-header-logo">
@@ -20,23 +23,25 @@
                                 <section class="navigation-catalog">
                                     <h2 class="visually-hidden">Каталог мороженого</h2>
                                     <a class="navigation-item" href="catalog.html">Каталог</a>
-                                    <ul class="catalog-sorts">
-                                        <li>
-                                            <a class="catalog-list-sort" href="#"><b>Новинки</b></a>
-                                        </li>
-                                        <li>
-                                            <a class="catalog-list-sort" href="#">Сливочное</a>
-                                        </li>
-                                        <li>
-                                            <a class="catalog-list-sort" href="#">Щербеты</a>
-                                        </li>
-                                        <li>
-                                            <a class="catalog-list-sort" href="#">Фруктовый лед</a>
-                                        </li>
-                                        <li>
-                                            <a class="catalog-list-sort" href="#">Мелорин</a>
-                                        </li>
-                                    </ul>
+                                    <div class="transparent">
+                                        <ul class="catalog-sorts">
+                                            <li>
+                                                <a class="catalog-list-sort" href="#"><b>Новинки</b></a>
+                                            </li>
+                                            <li>
+                                                <a class="catalog-list-sort" href="#">Сливочное</a>
+                                            </li>
+                                            <li>
+                                                <a class="catalog-list-sort" href="#">Щербеты</a>
+                                            </li>
+                                            <li>
+                                                <a class="catalog-list-sort" href="#">Фруктовый лед</a>
+                                            </li>
+                                            <li>
+                                                <a class="catalog-list-sort" href="#">Мелорин</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </section>
                             </li>
                             <li><a class="navigation-item" href="#">Доставка и оплата</a></li>
@@ -78,7 +83,7 @@
                                 </button>
                             </form>
                         </section>
-                        <a class="navigation-button user-basket" href="#">Корзина</a>
+                        <a class="navigation-button user-basket" href="#">Пусто</a>
                     </div>
                 </div>
                 <div class="header-info">
@@ -88,22 +93,33 @@
             </header>
             <main class="container">
                 <h1 class="visually-hidden">Магазин мороженого Глэси</h1>
-                <section class="slides">
+                <section class="slider">
                     <h2 class="visually-hidden">Слайды товаров</h2>
-                    <div class="slides-first"> </div>
-                    <ul class="slides-switches">
-                        <li class="slide-radio">
-                            <label for="first-slide" class="visually-hidden">Первый слайд</label>
-                            <input class="main-radio" id="first-slide" type="radio" name="slideradio" value="1" checked>
+                    <div class="slider-controls">
+                        <label for="slide-1"></label>
+                        <label for="slide-2"></label>
+                        <label for="slide-3"></label>
+                    </div>
+                    <ul class="slider-list">
+                        <li class="slider-item slide" id="product-1">
+                            <h3 class="slider-title">
+                                Крем-брюле и пломбир с малиновым джемом
+                            </h3>
+                            <a class="button slide-button" href="#">Давайте оба!</a>
                         </li>
-                        <li class="slide-radio">
-                            <input class="main-radio" type="radio" name="slideradio" value="2">
+                        <li class="slider-item slide" id="product-2">
+                            <h3 class="slider-title">
+                                Шоколадный пломбир и лимонный сорбет
+                            </h3>
+                            <a class="button slide-button" href="#">Давайте оба!</a>
                         </li>
-                        <li class="slide-radio">
-                            <input class="main-radio" type="radio" name="slideradio" value="3">
+                        <li class="slider-item slide" id="product-3">
+                            <h3 class="slider-title">
+                                Пломбир с помадкой и клубничный щербет
+                            </h3>
+                            <a class="button slide-button" href="#">Давайте оба!</a>
                         </li>
                     </ul>
-                    <a class="button" href="#">Давайте оба!</a>
                 </section>
                 <section class="banners">
                     <h2 class="visually-hidden">Банеры</h2>
@@ -114,7 +130,7 @@
                             <a class="button" href="#">Хочу варенье!</a>
                         </li>
                         <li class="banners-list-item">
-                            <h3>Шоколадки даром!!</h3>
+                            <h3>Шоколадки даром!</h3>
                             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                             <a class="button" href="#">Хочу шоколадки!</a>
                         </li>
@@ -135,6 +151,7 @@
                                     <b>310₽</b>/кг
                                 </a>
                             </p>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </li>
                         <li class="catalog-item hit">
                             <h3>
@@ -148,6 +165,7 @@
                                     <b>380₽</b>/кг
                                 </a>
                             </p>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </li>
                         <li class="catalog-item hit">
                             <h3>
@@ -161,6 +179,7 @@
                                     <b>355₽</b>/кг
                                 </a>
                             </p>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </li>
                         <li class="catalog-item hit">
                             <h3>
@@ -174,6 +193,7 @@
                                     <b>415₽</b>/кг
                                 </a>
                             </p>
+                            <a class="button" href="#">Быстрый просмотр</a>
                         </li>
                     </ul>
                 </section>
@@ -218,17 +238,17 @@
             <section class="address">
                 <h2 class="visually-hidden">Карта</h2>
                 <img class="map" src="img/map_index.jpg" alt="Карта">
-                <div class="positioner">
+                <div class="positioner container">
                     <div class="address-ordering">
-                        <p>Адрес главного офиса и офлайн-магазина:</p>
-                        <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-                        <p>Для заказов по телефону:</p>
-                        <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
+                        <p>Адрес главного офиса и офлайн-магазина:
+                        <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+                        <p>Для заказов по телефону:
+                        <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
                         <button class="button" type="button">Форма обратной связи</button>
                     </div>
                 </div>
             </section>
-            <footer class="main-footer">
+            <footer class="main-footer container">
                 <ul class="footer-social">
                     <li>
                         <a class="social-button twitter" href="#">
@@ -252,17 +272,17 @@
                     </li>
                 </ul>
                 <ul class="footer-docs">
-                    <li class="footer-docs-item"><a href="#"><b>Для поставщиков</b></a></li>
-                    <li class="footer-docs-item"><a href="#">О производстве</a></li>
-                    <li class="footer-docs-item"><a href="#">Наши документы</a></li>
-                    <li class="footer-docs-item"><a href="#">Экологические стандарты</a></li>
+                    <li><a class="footer-docs-item" href="#"><b>Для поставщиков</b></a></li>
+                    <li><a class="footer-docs-item" href="#">О производстве</a></li>
+                    <li><a class="footer-docs-item" href="#">Наши документы</a></li>
+                    <li><a class="footer-docs-item" href="#">Экологические стандарты</a></li>
                 </ul>
                 <div class="footer-copyright">
                     <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
                         <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTMLacademy">
                     </a>
                     <p>Сделано в
-                        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
+                        <a class="footer-copyright-item" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019
                     </p>
                 </div>
             </footer>
