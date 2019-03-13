@@ -11,7 +11,7 @@
         <input class="visually-hidden" id="slide-1" type="radio" name="sliderradio" value="1" checked>
         <input class="visually-hidden" id="slide-2" type="radio" name="sliderradio" value="2">
         <input class="visually-hidden" id="slide-3" type="radio" name="sliderradio" value="3">
-        <div class="main-wrapper">
+        <div class="main-wrapper background">
             <header class="main-header container">
                 <div class="header-container">
                     <nav class="main-navigation">
@@ -70,17 +70,19 @@
                                     <label class="visually-hidden" for="user-password">Пароль</label>
                                     <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
                                 </p>
-                                <ul class="login-password-info">
-                                    <li>
-                                        <a class="restore" href="#">Забыли пароль?</a>
-                                    </li>
-                                    <li>
-                                        <a class="new-iser" href="#">Новая регистрация</a>
-                                    </li>
-                                </ul>
-                                <button class="button" type="submit">
-                                    Войти
-                                </button>
+                                <div class="login-position">
+                                    <button class="button" type="submit">
+                                        Войти
+                                    </button>
+                                    <ul class="login-password-info">
+                                        <li>
+                                            <a href="#">Забыли пароль?</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Новая регистрация</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </form>
                         </section>
                         <a class="navigation-button user-basket" href="#">Пусто</a>
