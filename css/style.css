@@ -65,12 +65,7 @@ img {
     margin: 0;
 }
 
-.main-navigation {
-    background-color: rgba(255, 0, 0, 0.2);
-}
-
 .site-navigation {
-    background-color: rgba(255, 0, 0, 0.2);
     margin-left: 11px;
 }
 
@@ -102,7 +97,7 @@ img {
 }
 
 .header-info p {
-    margin: 0 auto;
+    margin: 0;
 }
 
 .header-container {
@@ -112,6 +107,7 @@ img {
 
 .main-header-logo {
     padding-top: 9px;
+    height: 100%;
 }
 
 .main-navigation,
@@ -189,7 +185,7 @@ img {
 .slider-title {
     width: 700px;
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
 
     font-size: 60px;
     line-height: 60px;
@@ -508,7 +504,7 @@ img {
 
 .navigation-button {
     border-radius: 100px;
-    padding: 8px 17px 8px 45px;
+    padding: 8px 16px 8px 45px;
     background-color: rgba(255, 255, 255, 0.2);
     margin-left: 10px;
 
@@ -520,9 +516,8 @@ img {
 }
 
 .navigation-button:hover {
-    width: auto;
     border-radius: 100px;
-    padding: 8px 17px 8px 45px;
+    padding: 8px 16px 8px 45px;
     background-color: #f8f7f4;
 
     font-size: 14px;
@@ -563,11 +558,12 @@ img {
 
 .work-time {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 10px;
     font-weight: 700;
 }
 
 .phone-number {
+    padding-top: 7px;
     font-size: 22px;
     line-height: 24px;
     font-weight: 700;
@@ -922,10 +918,10 @@ img {
     content: "";
     position: absolute;
     width: 21px;
-    height: 19px;
+    height: 20px;
     background-image: url("../img/icon_login.svg");
     background-repeat: no-repeat;
-    background-size: 21px 19px;
+    background-size: 21px 20px;
 
     top: 6px;
     left: 16px;
@@ -935,10 +931,10 @@ img {
     content: "";
     position: absolute;
     width: 21px;
-    height: 19px;
+    height: 20px;
     background-image: url("../img/icon_login_2.svg");
     background-repeat: no-repeat;
-    background-size: 21px 19px;
+    background-size: 21px 20px;
 
     top: 6px;
     left: 16px;
@@ -954,6 +950,19 @@ img {
     width: 21px;
     height: 20px;
     background-image: url("../img/icon_basket.svg");
+    background-repeat: no-repeat;
+    background-size: 21px 20px;
+
+    top: 7px;
+    left: 16px;
+}
+
+.user-basket:hover::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/icon_basket_2.svg");
     background-repeat: no-repeat;
     background-size: 21px 20px;
 
@@ -983,8 +992,6 @@ img {
 .login-form input[type="password"] {
     width: 100%;
     padding: 10px 15px;
-    font-size: 14px;
-    line-height: 24px;
 }
 
 .user-search-form {
@@ -1249,7 +1256,7 @@ img {
 .slide-button {
     font-size: 32px;
     line-height: 44px;
-    padding: 11px 43px 10px 41px;
+    padding: 10px 42px;
 }
 
 .button:hover {
