@@ -158,7 +158,6 @@ img {
 
 .slider,
 .banners,
-.catalog,
 .features,
 .wrapper {
     margin-bottom: 40px;
@@ -257,9 +256,11 @@ img {
 
 .banners-list-item {
     width: 560px;
-    padding: 18px;
+    padding: 17px 18px;
     border-radius: 15px;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
 }
 
 .banners-list-item:nth-child(2n+1) {
@@ -268,7 +269,7 @@ img {
 
 .banners-list-item h3 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
@@ -278,7 +279,8 @@ img {
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
-    margin-bottom: 43px;
+    margin: 0;
+    margin-bottom: 45px;
 }
 
 .banners-list-item .button {
@@ -287,7 +289,9 @@ img {
 
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 5px;
+    margin-right: 2px;
+    margin-left: auto;
+    margin-bottom: 8px;
 }
 
 
@@ -418,40 +422,47 @@ img {
 
 .catalog-item {
     position: relative;
-    width: 280px;
+    width: 267px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-right: 26px;
+    margin-bottom: 40px;
 }
 
-.catalog-item:not(:nth-of-type(4n)) {
-    margin-right: auto;
+.catalog-item:nth-of-type(4n) {
+    margin-right: 0px;
 }
 
-.catalog-item:hover {
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-    background-color: #9bafa3;
-    border-radius: 5px;
-}
-
-.catalog-item:hover > .button {
+.catalog-item:hover > .button,
+.catalog-item:hover::after {
     display: block;
-    position: absolute;
-    top: 340px;
 }
 
-.catalog-item h3 {
+.catalog-item-image {
+    margin-bottom: 0px;
+    z-index: 2;
+}
+
+.catalog-item-title {
     font-size: 16px;
     line-height: 22px;
     text-align: center;
     font-weight: 500;
     order: 1;
+    margin: 0;
+    margin-top: 6px;
+    z-index: 2;
 }
 
 .catalog-item .button {
     display: none;
     order: 2;
+    align-self: center;
     margin-bottom: 20px;
+    position: absolute;
+    top: 340px;
+    z-index: 2;
 }
 
 .catalog-item-price {
@@ -460,13 +471,13 @@ img {
     font-weight: 700;
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 178px;
     text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+    z-index: 3;
 }
 
 .catalog-item-price b {
     font-size: 45px;
-
 }
 
 .catalog-item-price a {
@@ -477,7 +488,6 @@ img {
     width: 267px;
     height: 267px;
     border-radius: 50%;
-
 }
 
 .catalog-container {
@@ -492,9 +502,24 @@ img {
     height: 61px;
     background-image: url("../img/label_hit.svg");
     background-size: 61px auto;
-    left: 0px;
-    align-self: flex-start;
+    z-index: 3;
 }
+
+.catalog-item::after {
+    content: "";
+    display: none;
+    position: absolute;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    top: -6px;
+    left: -13px;
+    width: calc(100% + 26px);
+    height: calc(100% + 85px);
+    z-index: 1;
+}
+
+
 
 .main-navigation {
     font-weight: 700;
@@ -577,7 +602,7 @@ img {
 .features {
     color: #323232;
     border-radius: 15px;
-    padding: 3px 33px 10px 20px;
+    padding: 25px 20px;
 
     background-image: url("../img/bg_waffle_pattern.jpg");
 }
@@ -586,30 +611,37 @@ img {
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .features-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .features-item {
+    padding-top: 12px;
     padding-left: 56px;
-    width: 475px;
+    width: 476px;
     position: relative;
     box-sizing: content-box;
+    margin-right: 30px;
+    margin-bottom: 10px;
 }
 
-.features-item:first-child {
-    margin-bottom: 20px;
+.features-item:nth-child(2n) {
+    margin-left: 3px;
+    margin-right: 0px;
+    padding-left: 58px;
 }
+
 
 .features-item:first-child::before {
     content: "";
     position: absolute;
+    top: 0px;
     left: 0px;
-    top: -15px;
     width: 49px;
     height: 49px;
     background-image: url("../img/icon_eskimo.svg");
@@ -619,8 +651,8 @@ img {
 .features-item:nth-child(2)::before {
     content: "";
     position: absolute;
+    top: 0px;
     left: 0px;
-    top: -15px;
     width: 49px;
     height: 49px;
     background-image: url("../img/icon_cow.svg");
@@ -630,8 +662,8 @@ img {
 .features-item:nth-child(3)::before {
     content: "";
     position: absolute;
+    top: 0px;
     left: 0px;
-    top: -15px;
     width: 49px;
     height: 49px;
     background-image: url("../img/icon_leaf.svg");
@@ -641,8 +673,8 @@ img {
 .features-item:last-child::before {
     content: "";
     position: absolute;
+    top: 0px;
     left: 0px;
-    top: -15px;
     width: 49px;
     height: 49px;
     background-image: url("../img/icon_thermo.svg");
