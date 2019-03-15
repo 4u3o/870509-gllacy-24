@@ -16,17 +16,17 @@
                             <img src="img/logo_glaccy.svg" width="154" height="64" alt="Логотип магазина Глэси">
                         </a>
                         <ul class="site-navigation">
-                            <li class="active">
+                            <li>
                                 <section class="navigation-catalog">
                                     <h2 class="visually-hidden">Каталог мороженого</h2>
-                                    <a class="navigation-item" href="catalog.html">Каталог</a>
-                                    <div class="transparent">
+                                    <a class="navigation-item active" href="catalog.html">Каталог</a>
+                                    <div class="navigation-lining">
                                         <ul class="catalog-sorts">
                                             <li>
-                                                <a class="catalog-list-sort" href="#"><b>Новинки</b></a>
+                                                <a class="catalog-list-sort first" href="#"><b>Новинки</b></a>
                                             </li>
                                             <li>
-                                                <a class="catalog-list-sort" href="#">Сливочное</a>
+                                                <a class="catalog-list-sort active" href="#">Сливочное</a>
                                             </li>
                                             <li>
                                                 <a class="catalog-list-sort" href="#">Щербеты</a>
@@ -35,7 +35,7 @@
                                                 <a class="catalog-list-sort" href="#">Фруктовый лед</a>
                                             </li>
                                             <li>
-                                                <a class="catalog-list-sort" href="#">Мелорин</a>
+                                                <a class="catalog-list-sort last" href="#">Мелорин</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -50,67 +50,73 @@
                             <a class="user-search" href="#">
                                 <span class="visually-hidden">Поиск</span>
                             </a>
-                            <form class="user-search-form" action="https://echo.htmlacademy.ru" method="post">
-                                <label class="visually-hidden" for="user-navigation-search">Поиск</label>
-                                <input id="user-navigation-search" type="text" name="user-navigation-search" placeholder="Что ищем?">
-                            </form>
+                            <div class="search-lining">
+                                <form class="user-search-form" action="https://echo.htmlacademy.ru" method="post">
+                                    <label class="visually-hidden" for="user-navigation-search">Поиск</label>
+                                    <input id="user-navigation-search" type="text" name="user-navigation-search" placeholder="Что ищем?">
+                                </form>
+                            </div>
                         </div>
                         <section class="login">
                             <h2 class="visually-hidden">Вход в личный кабинет</h2>
                             <a class="navigation-button user-login" href="#">Вход</a>
-                            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                                <p>
-                                    <label class="visually-hidden" for="user-email">Логин</label>
-                                    <input class="login-icon-email" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
-                                </p>
-                                <p>
-                                    <label class="visually-hidden" for="user-password">Пароль</label>
-                                    <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-                                </p>
-                                <ul class="login-password-info">
-                                    <li>
-                                        <a class="restore" href="#">Забыли пароль?</a>
-                                    </li>
-                                    <li>
-                                        <a class="new-iser" href="#">Новая регистрация</a>
-                                    </li>
-                                </ul>
-                                <button class="button" type="submit">
-                                    Войти
-                                </button>
-                            </form>
+                            <div class="login-lining">
+                                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                                    <p>
+                                        <label class="visually-hidden" for="user-email">Логин</label>
+                                        <input class="login-icon-email" id="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                                    </p>
+                                    <p>
+                                        <label class="visually-hidden" for="user-password">Пароль</label>
+                                        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                                    </p>
+                                    <div class="login-position">
+                                        <button class="button" type="submit">
+                                            Войти
+                                        </button>
+                                        <ul class="login-password-info">
+                                            <li>
+                                                <a href="#">Забыли пароль?</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Новая регистрация</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
                         </section>
                         <section class="basket">
                             <h2 class="visually-hidden">Товары в корзине</h2>
-                            <a class="navigation-button user-basket active" href="#">Корзина</a>
-                            <div class="mini-basket">
-                                <ol class="basket-list">
-                                    <li>
-                                        <div class="basket-item">
-                                            <h3>Пломбир с апельсиновым джемом</h3>
-                                            <div class="basket-price">
-                                                <img src="img/mini_basket_1.jpg" alt="Пломбир с апельсиновым джемом">
-                                                1,5 кг х <span>200 руб.</span> 300 руб.
-                                            </div>
-                                            <a class="basket-delete" href="catalog.html">Удалить</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="basket-item">
-                                            <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                                            <div class="basket-price">
-                                                <img src="img/mini_basket_2.jpg" alt="Клубничный пломбир с присыпкой">
-                                                1,5 кг х <span>300 руб.</span>450 руб.
-                                            </div>
-                                            <a class="basket-delete" href="catalog.html">Удалить</a>
-                                        </div>
-                                    </li>
-                                </ol>
-                                <div class="basket-footer">
-                                    <p>Итого:
-                                        <span class="basket-footer-price">750р.</span>
-                                    </p>
-                                    <a class="button" href="#">Оформить заказ</a>
+                            <a class="navigation-button user-basket active" href="#">2 товара</a>
+                            <div class="basket-lining">
+                                <div class="mini-basket">
+                                    <ol class="basket-list">
+                                        <li class="basket-item">
+                                            <button class="basket-delete"><span class="visually-hidden">Удалить</span></button>
+                                            <img class="mini-basket-pic" src="img/mini_basket_1.jpg" width="33px" height="33px" alt="Пломбир с апельсиновым джемом">
+                                            <h3 class="mini-basket-name">Пломбир с апельсиновым джемом</h3>
+                                            <p class="basket-price">
+                                                1,5 кг х <span>200 руб.</span>
+                                            </p>
+                                            <p>300 руб.</p>
+                                        </li>
+                                        <li class="basket-item">
+                                            <button class="basket-delete"><span class="visually-hidden">Удалить</span></button>
+                                            <img class="mini-basket-pic"  src="img/mini_basket_2.jpg" width="33px" height="33px" alt="Клубничный пломбир с присыпкой">
+                                            <h3 class="mini-basket-name">Клубничный пломбир с присыпкой из белого шоколада</h3>
+                                            <p class="basket-price">
+                                                1,5 кг х <span>300 руб.</span>
+                                            </p>
+                                            <p>450 руб.</p>
+                                        </li>
+                                    </ol>
+                                    <div class="basket-footer">
+                                        <p class="basket-footer-price">Итого:
+                                            <span>750р.</span>
+                                        </p>
+                                        <a class="button" href="#">Оформить заказ</a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -198,7 +204,7 @@
                 </section>
                 <section class="catalog">
                     <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
-                    <ul class="catalog-list catalog-full">
+                    <ul class="catalog-list">
                         <li class="catalog-item">
                             <h3 class="catalog-item-title">
                                 <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>

@@ -54,6 +54,7 @@ img {
 
 .site-navigation,
 .banners-list,
+.basket-list,
 .catalog-sorts,
 .catalog-list,
 .features-list,
@@ -63,6 +64,14 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.basket-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.basket-footer {
+    align-self: flex-end;
 }
 
 .site-navigation {
@@ -155,8 +164,18 @@ img {
     position: relative;
 }
 
+.basket {
+    position: relative;
+}
+
 .navigation-catalog .navigation-item:hover ~ .navigation-lining,
-.navigation-lining:hover {
+.navigation-lining:hover,
+.user-search:hover ~ .search-lining,
+.search-lining:hover,
+.user-login:hover ~ .login-lining,
+.login-lining:hover,
+.user-basket:hover ~ .basket-lining,
+.basket-lining:hover {
     display: block;
 }
 
@@ -361,12 +380,13 @@ img {
 
 .navigation-item:hover::after,
 .navigation-item:active::after {
-    opacity: 0;
+    content: none;
 }
 
 .navigation-lining,
 .login-lining,
-.search-lining {
+.search-lining,
+.basket-lining {
     display: none;
     position: absolute;
     padding: 13px 0;
@@ -386,6 +406,10 @@ img {
 .navigation-item.active {
     background-color: #d07058;
     border-radius: 100px;
+}
+
+.navigation-item.active::after {
+    content: none;
 }
 
 .navigation-item.active:hover {
@@ -415,6 +439,15 @@ img {
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
+    color: #323232;
+}
+
+.catalog-list-sort.active {
+    background-color: #d07058;
+    color: #ffffff;
+}
+
+.catalog-list-sort.active:hover {
     color: #323232;
 }
 
@@ -599,16 +632,95 @@ img {
 }
 
 .mini-basket {
-    display: none;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-    width: auto;
+    width: 540px;
+    padding: 20px 16px;
 
     font-size: 13px;
     line-height: 16px;
     color: #323232;
+}
+
+.mini-basket-name {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    width: 220px;
+    margin-right: 30px;
+
+}
+
+.basket-item > * {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.basket-item {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.basket-item:last-child {
+    margin-bottom: 0px;
+}
+
+.basket-delete {
+    position: relative;
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    margin-right: 15px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.basket-delete::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: #000000;
+    transform: translate(-7px) rotate(45deg);
+}
+
+.basket-delete::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: #000000;
+    transform: translate(-7px) rotate(-45deg);
+}
+
+.mini-basket-pic {
+    width: 33px;
+    height: 33px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.basket-footer-price {
+    text-align: right;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+.basket-footer .button {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 15px;
 }
 
 .user-basket:hover ~ .mini-basket {
@@ -1080,6 +1192,10 @@ img {
     left: 16px;
 }
 
+.user-basket.active {
+    color: #323232;
+}
+
 .user-basket.active::before {
     content: "";
     position: absolute;
@@ -1123,8 +1239,7 @@ img {
     padding: 9px 15px;
 }
 
-.user-search:hover ~ .search-lining,
-.search-lining:hover {
+ {
     display: block;
 }
 
@@ -1138,11 +1253,6 @@ img {
 
 .login-form p {
     margin-top: 0;
-}
-
-.user-login:hover ~ .login-lining,
-.login-lining:hover {
-    display: block;
 }
 
 .login-position {
@@ -1234,14 +1344,12 @@ img {
     padding-left: 15px;
 }
 
-.basket-price span {
-    color: #999999;
+.basket-price {
+    margin-right: 30px;
 }
 
-.basket-price img {
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
+.basket-price span {
+    color: #999999;
 }
 
 .pagination-list ,
