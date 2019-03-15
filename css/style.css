@@ -411,6 +411,7 @@ img {
 
 .catalog-list-sort {
     text-decoration: none;
+    padding: 0;
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
@@ -419,6 +420,21 @@ img {
 
 .catalog-list-sort:hover {
     background-color: #fbded8;
+}
+
+.catalog-list-sort.first {
+    position: relative;
+}
+
+.catalog-list-sort.first:before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 15px);
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.2;
+    top: 100%;
+    left: 6px;
 }
 
 .catalog-list-sort.first:hover {
@@ -849,14 +865,12 @@ img {
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 25px;
-    background-color: rgba(255, 0, 0, 0.2);
 }
 
 
 .footer-social {
     display: flex;
     margin-bottom: 5px;
-    background-color: rgba(255, 0, 0, 0.5);
 }
 
 .footer-social li {
@@ -887,6 +901,7 @@ img {
 
     top: 0px;
     left: 0px;
+    opacity: 0.8;
 }
 
 .twitter::before {
@@ -905,6 +920,10 @@ img {
     background-image: url("../img/icon_social_vk.svg");
 }
 
+.social-button:hover::before {
+    opacity: 1;
+}
+
 .footer-docs {
     display: flex;
     flex-wrap: wrap;
@@ -917,7 +936,6 @@ img {
     margin: 0;
     width: 60%;
     padding-left: 20px;
-    background-color: rgba(255, 0, 0, 0.2);
 }
 
 .footer-docs li:nth-child(2n+1) {
@@ -944,6 +962,10 @@ img {
     left: -20px;
 }
 
+.footer-docs b:hover::before {
+    background-image: url("../img/icon_heart_2.svg");
+}
+
 .footer-copyright {
     font-size: 12px;
     line-height: 18px;
@@ -965,7 +987,6 @@ img {
     background-position: center;
     background-size: 17px auto;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255, 0.2);
 }
 
 .user-search:hover::before {
@@ -1093,9 +1114,13 @@ img {
     right: 0px;
 }
 
-.user-search-form input[type="text"]:hover ~ .user-search-form,
-.user-search-form input[type="text"]:active ~ .user-search-form {
-    height: calc(100% - 4px);
+.user-search-form input[type="text"]:hover,
+.user-search-form input[type="text"]:active,
+.login-form input[type="email"]:hover,
+.login-form input[type="email"]:active,
+.login-form input[type="password"]:hover,
+.login-form input[type="password"]:active {
+    padding: 9px 15px;
 }
 
 .user-search:hover ~ .search-lining,
