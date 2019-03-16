@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="main-wrapper">
-            <header class="main-header container">
+            <header class="main-header container nomargin">
                 <div class="header-container">
                     <nav class="main-navigation">
                         <a class="main-header-logo" href="index.html">
@@ -128,16 +128,16 @@
                 </div>
             </header>
             <main class="container">
-                <h1 class="page-title">Сливочное мороженое</h1>
                 <ul class="breadcrumbs">
-                    <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
-                    <li class="breadcrumbs-item"><a href="catalog.html">Каталог</a></li>
+                    <li class="breadcrumbs-item"><a class="breadcrumbs-item-link"  href="index.html">Главная</a></li>
+                    <li class="breadcrumbs-item"><a class="breadcrumbs-item-link" href="catalog.html">Каталог</a></li>
                     <li class="breadcrumbs-item">Сливочное</li>
                 </ul>
+                <h1 class="page-title">Сливочное мороженое</h1>
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <form class="filters-list" action="https://echo.htmlacademy.ru" method="get">
-                        <fieldset>
+                        <fieldset class="filters-list-item">
                             <legend>Сортировка:</legend>
                             <label class="visually-hidden" for="sortby">Метод сортировки</label>
                             <select class="filters-select" id="sortby" name="sortby">
@@ -147,59 +147,58 @@
                                 <option value="fat">по жирности</option>
                             </select>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filters-list-item">
                             <legend>Цена: 100 руб. – 500 руб.</legend>
                             <label class="visually-hidden" for="pricerange">Вилка цены</label>
                             <input class="filters-range" id="pricerange" type="range" name="pricerange" min="100" max="500" step="10" value="120">
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filters-list-item">
                             <legend>Жирность:</legend>
-                            <ul>
-                                <li>
-                                    <input class="filters-radio" id="zerofat" type="radio" name="fatradio" value="0%">
+                            <ul class="fat-list">
+                                <li class="fat-list-item">
+                                    <input class="filters-radio visually-hidden" id="zerofat" type="radio" name="fatradio" value="0%">
                                     <label class="filters-label" for="zerofat">0%</label>
                                 </li>
-                                <li>
-                                    <input class="filters-radio" id="upten" type="radio" name="fatradio" value="до 10%" checked>
+                                <li class="fat-list-item">
+                                    <input class="filters-radio visually-hidden" id="upten" type="radio" name="fatradio" value="до 10%" checked>
                                     <label class="filters-label" for="upten">до 10%</label>
                                 </li>
-                                <li>
-                                    <input class="filters-radio" id="upthirty" type="radio" name="fatradio" value="до 30%">
+                                <li class="fat-list-item">
+                                    <input class="filters-radio visually-hidden" id="upthirty" type="radio" name="fatradio" value="до 30%">
                                     <label class="filters-label" for="upthirty">до 30%</label>
                                 </li>
-                                <li>
-                                    <input class="filters-radio" id="afterthirty" type="radio" name="fatradio" value="выше 30%">
+                                <li class="fat-list-item">
+                                    <input class="filters-radio visually-hidden" id="afterthirty" type="radio" name="fatradio" value="выше 30%">
                                     <label class="filters-label" for="afterthirty">выше 30%</label>
                                 </li>
                             </ul>
                         </fieldset>
-                        <fieldset>
+                        <fieldset class="filters-list-item">
                             <legend>Наполнители:</legend>
-                            <ul><!--Нужен ли тут и в жирности список? В барбершопе есть, но там и по макету похоже на список а в глэси в строку фильтры идут-->
-                                <li>
-                                    <input class="filters-check checkbox-checked" id="chokocheck" type="checkbox" name="chokocheck" checked>
-                                    <label for="chokocheck">шоколадные</label>
+                            <ul class="fillers-list">
+                                <li class="fillers-list-item">
+                                    <input class="filters-check visually-hidden" id="chokocheck" type="checkbox" name="chokocheck" checked>
+                                    <label class="fillers-label" for="chokocheck">шоколадные</label>
                                 </li>
-                                <li>
-                                    <input class="filters-check checkbox-checked" id="sugarcheck" type="checkbox" name="sugarcheck" checked>
-                                    <label for="sugarcheck">сахарные присыпки</label>
+                                <li class="fillers-list-item">
+                                    <input class="filters-check visually-hidden" id="sugarcheck" type="checkbox" name="sugarcheck" checked>
+                                    <label class="fillers-label" for="sugarcheck">сахарные присыпки</label>
                                 </li>
-                                <li>
-                                    <input class="filters-check" id="fruitcheck" type="checkbox" name="fruitcheck">
-                                    <label for="fruitcheck">фрукты</label>
+                                <li class="fillers-list-item">
+                                    <input class="filters-check visually-hidden" id="fruitcheck" type="checkbox" name="fruitcheck">
+                                    <label class="fillers-label" for="fruitcheck">фрукты</label>
                                 </li>
-                                <li>
-                                    <input class="filters-check" id="syropcheck" type="checkbox" name="syropcheck">
-                                    <label for="syropcheck">сиропы</label>
+                                <li class="fillers-list-item">
+                                    <input class="filters-check visually-hidden" id="syropcheck" type="checkbox" name="syropcheck">
+                                    <label class="fillers-label" for="syropcheck">сиропы</label>
                                 </li>
-                                <li>
-                                    <input class="filters-check" id="jamcheck" type="checkbox" name="jamcheck">
-                                    <label for="jamcheck">джемы</label>
+                                <li class="fillers-list-item">
+                                    <input class="filters-check visually-hidden" id="jamcheck" type="checkbox" name="jamcheck">
+                                    <label class="fillers-label" for="jamcheck">джемы</label>
                                 </li>
                             </ul>
                         </fieldset>
-
-                        <button class="button" type="submit">Применить</button>
+                        <button class="button filters-btn" type="submit">Применить</button>
                     </form>
                 </section>
                 <section class="catalog">
