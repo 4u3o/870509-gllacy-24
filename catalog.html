@@ -122,17 +122,19 @@
                         </section>
                     </div>
                 </div>
-                <div class="header-info">
-                    <p class="work-time">С 10 до 20, ежедневно</p>
-                    <p class="phone-number">8 812 450-25-25</p>
+                <div class="header-info notmain">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs-item"><a class="breadcrumbs-item-link"  href="index.html">Главная</a></li>
+                        <li class="breadcrumbs-item"><a class="breadcrumbs-item-link" href="catalog.html">Каталог</a></li>
+                        <li class="breadcrumbs-item">Сливочное</li>
+                    </ul>
+                    <div>
+                        <p class="work-time">С 10 до 20, ежедневно</p>
+                        <p class="phone-number">8 812 450-25-25</p>
+                    </div>
                 </div>
             </header>
             <main class="container">
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs-item"><a class="breadcrumbs-item-link"  href="index.html">Главная</a></li>
-                    <li class="breadcrumbs-item"><a class="breadcrumbs-item-link" href="catalog.html">Каталог</a></li>
-                    <li class="breadcrumbs-item">Сливочное</li>
-                </ul>
                 <h1 class="page-title">Сливочное мороженое</h1>
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -140,12 +142,14 @@
                         <fieldset class="filters-list-item">
                             <legend>Сортировка:</legend>
                             <label class="visually-hidden" for="sortby">Метод сортировки</label>
-                            <select class="filters-select" id="sortby" name="sortby">
-                                <option value="popularity">по популярности</option>
-                                <option value="notexpensive">сначало недорогие</option>
-                                <option value="expensive">сначало дорогие</option>
-                                <option value="fat">по жирности</option>
-                            </select>
+                            <div class="select-arrow">
+                                <select class="filters-select" id="sortby" name="sortby">
+                                    <option value="popularity">по популярности</option>
+                                    <option value="notexpensive">сначало недорогие</option>
+                                    <option value="expensive">сначало дорогие</option>
+                                    <option value="fat">по жирности</option>
+                                </select>
+                            </div>
                         </fieldset>
                         <fieldset class="filters-list-item">
                             <legend>Цена: 100 руб. – 500 руб.</legend>
@@ -173,7 +177,7 @@
                                 </li>
                             </ul>
                         </fieldset>
-                        <fieldset class="filters-list-item">
+                        <fieldset class="filters-list-item fillers">
                             <legend>Наполнители:</legend>
                             <ul class="fillers-list">
                                 <li class="fillers-list-item">
