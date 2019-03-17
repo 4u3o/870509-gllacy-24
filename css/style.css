@@ -67,6 +67,7 @@ img {
 }
 
 .basket-list {
+    padding-bottom: 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
@@ -403,16 +404,17 @@ img {
 .login-lining,
 .search-lining,
 .basket-lining {
-    display: none;
+    display: block;
     position: absolute;
-    padding: 13px 0;
-    right: 0px;
+    padding: 11px 0;
+    right: -3px;
     top: 100%;
     z-index: 300;
 }
 
 .navigation-lining {
     left: -7px;
+    padding: 13px 0;
 }
 
 .search-lining {
@@ -449,13 +451,24 @@ img {
     border-radius: 5px;
 }
 
-.catalog-list-sort {
+.catalog-sorts .catalog-list-sort {
     text-decoration: none;
-    padding: 0;
+    display: block;
+    padding: 7px 20px 9px 20px;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 16px;
     font-weight: 400;
     color: #323232;
+}
+
+.catalog-sorts .catalog-list-sort.last {
+    padding-bottom: 12px;
+}
+
+.catalog-sorts .catalog-list-sort.first {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-bottom: 1px;
 }
 
 .catalog-list-sort.active {
@@ -527,7 +540,7 @@ img {
 }
 
 .catalog-item-title {
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     font-size: 16px;
     line-height: 22px;
     text-align: center;
@@ -640,11 +653,6 @@ img {
     color: #e84d37;
 }
 
-.catalog-list-sort {
-    display: block;
-    padding: 0 20px;
-}
-
 .mini-basket {
     display: flex;
     flex-direction: column;
@@ -664,25 +672,42 @@ img {
     line-height: 16px;
     font-weight: 400;
     width: 220px;
-    margin-right: 30px;
-
-}
-
-.basket-item > * {
-    background-color: rgba(255, 0, 0, 0.1);
+    margin-right: 27px;
+    margin-top: 10px;
 }
 
 .basket-item {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
 }
 
 .basket-item:last-child {
     margin-bottom: 0px;
+}
+
+.mini-basket-pic {
+    width: 33px;
+    height: 33px;
+    margin-right: 12px;
+    border-radius: 50%;
+    align-self: flex-start;
+}
+
+.basket-footer-price {
+    text-align: right;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.basket-footer .button {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 15px;
 }
 
 .modal-close {
@@ -709,6 +734,7 @@ img {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .basket-delete::before,
@@ -741,26 +767,6 @@ img {
 
     background-color: #000000;
     transform: translate(-7px) rotate(-45deg);
-}
-
-.mini-basket-pic {
-    width: 33px;
-    height: 33px;
-    margin-right: 15px;
-    border-radius: 50%;
-}
-
-.basket-footer-price {
-    text-align: right;
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 700;
-}
-
-.basket-footer .button {
-    font-size: 18px;
-    line-height: 24px;
-    padding: 10px 15px;
 }
 
 .work-time {
@@ -1407,6 +1413,7 @@ img {
 
 .user-basket.active {
     color: #323232;
+    background-color: #f8f7f4;
 }
 
 .user-basket.active::before {
@@ -1422,7 +1429,7 @@ img {
 .login-form input[type="password"],
 .mailing input[type="email"] {
     width: 100%;
-    padding: 10px 15px;
+    padding: 8px 15px 9px 15px;
 }
 
 .user-search-form {
@@ -1449,7 +1456,7 @@ img {
 .feedback-form input[type="email"]:focus,
 .feedback-form textarea:hover,
 .feedback-form textarea:focus {
-    padding: 9px 14px;
+    padding: 7px 14px 8px 14px;
 }
 
 .user-search-form input[type="text"]:focus,
@@ -1464,8 +1471,8 @@ img {
 }
 
 .login-form {
-    width: 280px;
-    padding: 20px 17px 20px 19px;
+    width: 278px;
+    padding: 20px 17px 23px 19px;
     border-radius: 5.1px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #f8f7f4;
@@ -1473,6 +1480,7 @@ img {
 
 .login-form p {
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .login-position {
@@ -1481,13 +1489,16 @@ img {
 }
 
 .login-position .button {
-    padding: 15px 25px;
+    padding: 12px 25px 8px 25px;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 18px / 22px;
 }
 
 .login-password-info a {
     color: #323232;
     font-size: 13px;
-    line-height: 24px;
+    line-height: 15px;
     text-decoration: underline;
 }
 
@@ -1588,11 +1599,16 @@ img {
 }
 
 .basket-price {
-    margin-right: 30px;
+    margin-top: 10px;
+    margin-right: 28px;
 }
 
 .basket-price span {
     color: #999999;
+}
+
+.basket-price-sum {
+    margin-top: 10px;
 }
 
 .pagination-list ,
@@ -1681,11 +1697,6 @@ img {
     color: #323232;
 }
 
-.prev {
-    margin-right: 15px;
-    position: relative;
-}
-
 .button {
     display: inline-block;
     padding: 12px 44px;
@@ -1698,6 +1709,7 @@ img {
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
     background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    background-repeat: no-repeat;
     border-radius: 50px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border: none;
