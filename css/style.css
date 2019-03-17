@@ -629,14 +629,7 @@ img {
 }
 
 .navigation-button:hover {
-    border-radius: 100px;
-    padding: 8px 16px 8px 45px;
     background-color: #f8f7f4;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    vertical-align: middle;
     color: #323232;
 }
 
@@ -768,10 +761,6 @@ img {
     font-size: 18px;
     line-height: 24px;
     padding: 10px 15px;
-}
-
-.user-basket:hover ~ .mini-basket {
-    display: inline-flex;
 }
 
 .work-time {
@@ -1408,16 +1397,7 @@ img {
 }
 
 .user-basket:hover::before {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 20px;
     background-image: url("../img/icon_basket_2.svg");
-    background-repeat: no-repeat;
-    background-size: 21px 20px;
-
-    top: 7px;
-    left: 16px;
 }
 
 .user-basket.active {
@@ -1425,16 +1405,7 @@ img {
 }
 
 .user-basket.active::before {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 20px;
     background-image: url("../img/icon_basket_full.svg");
-    background-repeat: no-repeat;
-    background-size: 21px 20px;
-
-    top: 7px;
-    left: 16px;
 }
 
 .search {
@@ -1573,10 +1544,7 @@ img {
 .feedback-form input[type="email"],
 .feedback-form textarea {
     font-size: 16px;
-
     line-height: 18px;
-
-
     padding: 10px 15px;
 }
 
@@ -1602,13 +1570,6 @@ img {
 .user-search-form input[type="text"] {
     font-size: 14px;
     line-height: 24px;
-}
-
-.login-form input[type="email" placeholder]:focus,
-.login-form input[type="password" placeholder],
-.user-search-form input[type="text" placeholder] {
-    color: #999999;
-    font-weight: 400;
 }
 
 .feedback-form-text {
