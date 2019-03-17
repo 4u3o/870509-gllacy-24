@@ -692,6 +692,19 @@ img {
     margin-bottom: 0px;
 }
 
+.modal-close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 17px;
+    right: 17px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .basket-delete {
     position: relative;
     width: 11px;
@@ -705,20 +718,34 @@ img {
     cursor: pointer;
 }
 
-.basket-delete::before {
-    content: "";
-    position: absolute;
+.basket-delete::before,
+.basket-delete::after{
     width: 15px;
     height: 1px;
     background-color: #000000;
+}
+
+.modal-close::before,
+.modal-close::after {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.basket-delete::before,
+.modal-close::before {
+    content: "";
+    position: absolute;
+
+
     transform: translate(-7px) rotate(45deg);
 }
 
-.basket-delete::after {
+.basket-delete::after,
+.modal-close::after {
     content: "";
     position: absolute;
-    width: 15px;
-    height: 1px;
+
     background-color: #000000;
     transform: translate(-7px) rotate(-45deg);
 }
@@ -1416,7 +1443,8 @@ img {
 
 .user-search-form input[type="text"],
 .login-form input[type="email"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.mailing input[type="email"] {
     width: 100%;
     padding: 10px 15px;
 }
@@ -1436,13 +1464,25 @@ img {
 .login-form input[type="email"]:hover,
 .login-form input[type="email"]:focus,
 .login-form input[type="password"]:hover,
-.login-form input[type="password"]:focus {
-    padding: 9px 15px;
+.login-form input[type="password"]:focus,
+.mailing input[type="email"]:hover,
+.mailing input[type="email"]:focus,
+.feedback-form input[type="text"]:hover,
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:hover,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:hover,
+.feedback-form textarea:focus {
+    padding: 9px 14px;
 }
 
 .user-search-form input[type="text"]:focus,
 .login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
+.login-form input[type="password"]:focus,
+.mailing-form input[type="email"]:focus,
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
     font-weight: 700;
     color: #323232;
 }
@@ -1476,9 +1516,10 @@ img {
 }
 
 .modal-feedback {
-    width: 440px;
+    width: 478px;
     border-radius: 10px;
     background-color: #f8f7f4;
+    position: relative;
 
     padding: 20px 24px;
 }
@@ -1488,8 +1529,8 @@ img {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
+    margin: 0;
 }
-
 
 .feedback-form input,
 .login-form input,
@@ -1503,39 +1544,71 @@ img {
 .feedback-form input:hover,
 .login-form input:hover,
 .user-search-form input:hover,
-.mailing-form input:hover {
+.mailing-form input:hover,
+.feedback-form textarea:hover {
     border: 2px solid rgba(154, 154, 154, 0.52);
 }
 
 .feedback-form input:focus,
 .login-form input:focus,
 .user-search-form input:focus,
-.mailing-form input:focus {
+.mailing-form input:focus,
+.feedback-form textarea:focus {
     border: 2px solid rgba(46, 136, 228, 0.52);
     outline: none;
     color: #323232;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form .button {
+    padding: 10px 24px;
+    align-self: flex-end;
 }
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"],
 .feedback-form textarea {
     font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #999999;
 
-    padding-left: 15px;
+    line-height: 18px;
+
+
+    padding: 10px 15px;
+}
+
+.feedback-form input::placeholder,
+.mailing input::placeholder,
+.feedback-form textarea::placeholder,
+.login-form input::placeholder,
+.user-search-form input::placeholder {
+    font-weight: 400;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+    width: 267px;
+}
+
+.feedback-form textarea {
+    width: calc(100% - 50px);
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"],
 .user-search-form input[type="text"] {
     font-size: 14px;
-    font-weight: 400;
     line-height: 24px;
-    color: #999999;
+}
 
-    padding-left: 15px;
+.login-form input[type="email" placeholder]:focus,
+.login-form input[type="password" placeholder],
+.user-search-form input[type="text" placeholder] {
+    color: #999999;
+    font-weight: 400;
 }
 
 .feedback-form-text {
