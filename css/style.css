@@ -940,6 +940,11 @@ img {
     opacity: 1;
 }
 
+.filters-radio:disabled ~ .filters-label::before,
+.filters-check:disabled ~ .fillers-label::before {
+    opacity: 0.4;
+}
+
 #zerofat:checked ~ .filters-label::before,
 #upten:checked ~ .filters-label::before,
 #upthirty:checked ~ .filters-label::before,
