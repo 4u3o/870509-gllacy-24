@@ -1432,16 +1432,19 @@ img {
 }
 
 .user-search-form input[type="text"]:hover,
-.user-search-form input[type="text"]:active,
+.user-search-form input[type="text"]:focus,
 .login-form input[type="email"]:hover,
-.login-form input[type="email"]:active,
+.login-form input[type="email"]:focus,
 .login-form input[type="password"]:hover,
-.login-form input[type="password"]:active {
+.login-form input[type="password"]:focus {
     padding: 9px 15px;
 }
 
- {
-    display: block;
+.user-search-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    font-weight: 700;
+    color: #323232;
 }
 
 .login-form {
