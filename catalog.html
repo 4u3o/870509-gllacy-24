@@ -153,8 +153,13 @@
                         </fieldset>
                         <fieldset class="filters-list-item">
                             <legend>Цена: 100 руб. – 500 руб.</legend>
-                            <label class="visually-hidden" for="pricerange">Вилка цены</label>
-                            <input class="filters-range" id="pricerange" type="range" name="pricerange" min="100" max="500" step="10" value="120">
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
+                            </div>
                         </fieldset>
                         <fieldset class="filters-list-item">
                             <legend>Жирность:</legend>
@@ -379,12 +384,14 @@
                     </ul>
                 </section>
                 <div class="paginator">
-                    <ul class="pagination-list dis">
+                    <ul class="pagination-list">
+                        <li class="pagination-item"><a class="pagination-item-link prev disabled" href="#"><span class="visually-hidden">Назад</span></a></li>
                         <li class="pagination-item"><a class="pagination-item-link current" href="#">1</a></li>
                         <li class="pagination-item"><a class="pagination-item-link" href="#">2</a></li>
                         <li class="pagination-item"><a class="pagination-item-link" href="#">3</a></li>
                         <li class="pagination-item"><a class="pagination-item-link" href="#">4</a></li>
                         <li class="pagination-item"><a class="pagination-item-link" href="#">5</a></li>
+                        <li class="pagination-item"><a class="pagination-item-link next" href="#"><span class="visually-hidden">Вперед</span></a></li>
                     </ul>
                 </div>
             </main>
