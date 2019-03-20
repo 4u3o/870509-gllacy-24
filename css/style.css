@@ -93,7 +93,8 @@ img {
 }
 
 .container {
-    width: 1146px;
+    width: 1200px;
+    padding: 0px 27px;
     margin: 0 auto;
 }
 
@@ -129,6 +130,11 @@ img {
 .main-header-logo {
     padding-top: 9px;
     height: 100%;
+}
+
+.main-header-logo.link:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 .main-navigation,
@@ -330,7 +336,7 @@ img {
 }
 
 .banners-list-item .button {
-    float: right;
+    align-self: flex-end;
     padding: 10px 23px;
 
     font-size: 18px;
@@ -442,6 +448,7 @@ img {
 
 .slide-radio {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .catalog-sorts {
@@ -533,6 +540,7 @@ img {
 .catalog-item:hover > .button,
 .catalog-item:hover::after {
     display: block;
+    margin-bottom: -65.5px;
 }
 
 .catalog-item-image {
@@ -558,10 +566,11 @@ img {
 
 .catalog-item .button {
     display: none;
+
     order: 2;
     align-self: center;
+    margin-top: 20px;
     margin-bottom: 20px;
-    position: absolute;
     top: 340px;
 }
 
@@ -882,9 +891,15 @@ img {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border: none;
+
 
     color: #ffffff;
     padding: 8px 30px 8px 13px;
+}
+
+.filters-select::-ms-expand {
+    display: none;
 }
 
 .filters-select:hover {
@@ -1025,6 +1040,7 @@ img {
     padding: 25px 20px 15px 20px;
 
     background-image: url("../img/bg_waffle_pattern.jpg");
+    background-color: #f1e6d3;
 }
 
 .features p {
@@ -1108,7 +1124,9 @@ img {
     font-weight: 500;
 
     background-image: url("../img/bg_blog.jpg");
-    background-repeat: round;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right bottom;
     border-radius: 15px;
 }
 
@@ -1136,7 +1154,7 @@ img {
     padding: 5px;
 
     background-image: url("../img/bg_post.png");
-    background-repeat: round;
+    background-size: cover;
     border-radius: 15px;
 }
 
@@ -1162,9 +1180,6 @@ img {
 }
 
 .mailing-form input[type="email"] {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
     color: #999999;
     width: auto;
     flex-grow: 1;
@@ -1202,6 +1217,7 @@ img {
     background-color: #ffffff;
     border-radius: 15px;
     padding: 29px 25px;
+    margin-right: 27px;
 }
 
 .address-ordering p {
@@ -1476,8 +1492,7 @@ img {
 }
 
 .user-search-form input[type="text"],
-.login-form input[type="email"],
-.login-form input[type="password"],
+.login-form input,
 .mailing input[type="email"] {
     width: 100%;
     padding: 8px 15px 9px 15px;
@@ -1593,7 +1608,6 @@ img {
 .mailing-form input:focus,
 .feedback-form textarea:focus {
     border: 2px solid rgba(46, 136, 228, 0.52);
-    outline: none;
     color: #323232;
 }
 
@@ -1609,10 +1623,11 @@ img {
 
 .feedback-form input[type="text"],
 .feedback-form input[type="email"],
-.feedback-form textarea {
+.feedback-form textarea,
+.mailing-form input[type="email"] {
     font-size: 16px;
-    line-height: 18px;
-    padding: 8px 15px 9px 15px;;
+    line-height: 24px;
+    padding: 8px 15px 9px 15px;
 }
 
 .feedback-form input::placeholder,
@@ -1629,7 +1644,7 @@ img {
 }
 
 .feedback-form textarea {
-    width: calc(100% - 50px);
+    width: 428px;
 }
 
 .login-form input[type="email"],
@@ -1671,6 +1686,7 @@ img {
 
 .breadcrumbs li {
     display: inline-block;
+    vertical-align: top;
 }
 
 .paginator {
@@ -1809,10 +1825,11 @@ img {
 }
 
 .button:focus {
-    outline: none;
+    outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
     position: absolute;
