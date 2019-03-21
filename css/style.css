@@ -39,7 +39,7 @@ img {
 }
 
 .main-wrapper {
-    min-width: 940px;
+    min-width: 1200px;
     background-color: #849d8f;
     background-position: top center;
     background-repeat: no-repeat;
@@ -301,6 +301,7 @@ img {
 }
 
 .banners-list {
+    min-width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding-left: 0px;
@@ -537,8 +538,11 @@ img {
     margin-right: 0px;
 }
 
-.catalog-item:hover > .button,
 .catalog-item:hover::after {
+    display: block;
+}
+
+.catalog-item:hover > .button{
     display: block;
     margin-bottom: -65.5px;
 }
@@ -566,12 +570,11 @@ img {
 
 .catalog-item .button {
     display: none;
+    position: absolute;
 
-    order: 2;
-    align-self: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    top: 340px;
+    left: 40px;
+    bottom: 10px;
+    padding: 10px 17px;
 }
 
 .catalog-item:hover > .catalog-item-price,
@@ -1493,9 +1496,55 @@ img {
 
 .user-search-form input[type="text"],
 .login-form input,
+.mailing input[type="email"],
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea,
+.mailing-form input[type="email"] {
+    background-color: #ffffff;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
+    padding: 12px 15px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea,
+.mailing-form input[type="email"] {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.user-search-form input[type="text"],
+.login-form input,
 .mailing input[type="email"] {
+    font-size: 14px;
+    line-height: 16px;
     width: 100%;
-    padding: 8px 15px 9px 15px;
+}
+
+.user-search-form input[type="text"]:hover,
+.login-form input[type="email"]:hover,
+.login-form input[type="password"]:hover,
+.mailing input[type="email"]:hover,
+.feedback-form input[type="text"]:hover,
+.feedback-form input[type="email"]:hover,
+.feedback-form textarea:hover {
+    padding: 11px 14px;
+    border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.user-search-form input[type="text"]:focus,
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus,
+.mailing-form input[type="email"]:focus,
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+    padding: 11px 14px;
+    font-weight: 700;
+    color: #323232;
+    border: solid 2px rgba(46, 136, 228, 0.52)
 }
 
 .user-search-form {
@@ -1508,34 +1557,6 @@ img {
     right: 0px;
 }
 
-.user-search-form input[type="text"]:hover,
-.user-search-form input[type="text"]:focus,
-.login-form input[type="email"]:hover,
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:hover,
-.login-form input[type="password"]:focus,
-.mailing input[type="email"]:hover,
-.mailing input[type="email"]:focus,
-.feedback-form input[type="text"]:hover,
-.feedback-form input[type="text"]:focus,
-.feedback-form input[type="email"]:hover,
-.feedback-form input[type="email"]:focus,
-.feedback-form textarea:hover,
-.feedback-form textarea:focus {
-    padding: 7px 14px 8px 14px;
-}
-
-.user-search-form input[type="text"]:focus,
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus,
-.mailing-form input[type="email"]:focus,
-.feedback-form input[type="text"]:focus,
-.feedback-form input[type="email"]:focus,
-.feedback-form textarea:focus {
-    font-weight: 700;
-    color: #323232;
-}
-
 .login-form {
     width: 278px;
     padding: 20px 17px 23px 19px;
@@ -1544,7 +1565,8 @@ img {
     background-color: #f8f7f4;
 }
 
-.login-form p {
+.login-form p,
+.feedback-form p {
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -1574,7 +1596,7 @@ img {
     background-color: #f8f7f4;
     position: relative;
 
-    padding: 20px 24px;
+    padding: 18px 24px;
 }
 
 .modal-feedback h2 {
@@ -1583,15 +1605,7 @@ img {
     line-height: 28px;
     font-weight: 500;
     margin: 0;
-}
-
-.feedback-form input,
-.login-form input,
-.user-search-form input,
-.mailing-form input {
-    background-color: #ffffff;
-    border: 1px solid rgba(178, 178, 178, 0.52);
-    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .feedback-form input:hover,
@@ -1599,7 +1613,7 @@ img {
 .user-search-form input:hover,
 .mailing-form input:hover,
 .feedback-form textarea:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+
 }
 
 .feedback-form input:focus,
@@ -1621,15 +1635,6 @@ img {
     align-self: flex-end;
 }
 
-.feedback-form input[type="text"],
-.feedback-form input[type="email"],
-.feedback-form textarea,
-.mailing-form input[type="email"] {
-    font-size: 16px;
-    line-height: 24px;
-    padding: 8px 15px 9px 15px;
-}
-
 .feedback-form input::placeholder,
 .mailing input::placeholder,
 .feedback-form textarea::placeholder,
@@ -1645,13 +1650,6 @@ img {
 
 .feedback-form textarea {
     width: 428px;
-}
-
-.login-form input[type="email"],
-.login-form input[type="password"],
-.user-search-form input[type="text"] {
-    font-size: 14px;
-    line-height: 24px;
 }
 
 .feedback-form-text {
