@@ -1691,7 +1691,7 @@ img {
 .paginator {
     display: flex;
     justify-content: flex-end;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
