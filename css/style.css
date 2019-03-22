@@ -542,7 +542,7 @@ img {
     display: block;
 }
 
-.catalog-item:hover > .button{
+.catalog-item:hover > .button {
     display: block;
     margin-bottom: -65.5px;
 }
@@ -755,7 +755,7 @@ img {
 }
 
 .basket-delete::before,
-.basket-delete::after{
+.basket-delete::after {
     width: 15px;
     height: 1px;
     background-color: #000000;
