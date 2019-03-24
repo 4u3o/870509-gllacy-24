@@ -5,7 +5,7 @@
         <title>HTML Academy: Глейси</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.min.css" rel="stylesheet">
     </head>
     <body>
         <input class="visually-hidden" id="slide-1" type="radio" name="sliderradio" value="1" checked>
@@ -102,9 +102,9 @@
                 <section class="slider">
                     <h2 class="visually-hidden">Слайды товаров</h2>
                     <div class="slider-controls">
-                        <label for="slide-1"></label>
-                        <label for="slide-2"></label>
-                        <label for="slide-3"></label>
+                        <label for="slide-1"><span class="visually-hidden">Первый слайд</span></label>
+                        <label for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
+                        <label for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
                     </div>
                     <ul class="slider-list">
                         <li class="slider-item slide" id="product-1">
@@ -250,7 +250,7 @@
                         <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
                         <p>Для заказов по телефону:</p>
                         <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-                        <button class="button" type="button">Форма обратной связи</button>
+                        <a class="button" href="writeus.html">Форма обратной связи</a>
                     </div>
                 </div>
             </section>
