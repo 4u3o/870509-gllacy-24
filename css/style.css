@@ -1940,22 +1940,6 @@ img {
             box-shadow: none;
 }
 
-.button.filters-btn:hover {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background: none;
-    background-color: #ffffff;
-    color: #323232;
-}
-
-.button.filters-btn:active {
-    -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
-            box-shadow: inset 0px 2px 1px 0 #696969;
-    background-color: #ededed;
-    border: 0;
-    padding: 10px 30px 9px 30px;
-}
-
 .slide-button {
     font-size: 32px;
     line-height: 44px;
@@ -1981,6 +1965,22 @@ img {
 .button:focus {
     outline: 1px dotted #212121;
     outline: 5px auto -webkit-focus-ring-color;
+}
+
+.button.filters-btn:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: none;
+    background-color: #ffffff;
+    color: #323232;
+}
+
+.button.filters-btn:active {
+    -webkit-box-shadow: inset 0px 2px 1px 0 #696969;
+            box-shadow: inset 0px 2px 1px 0 #696969;
+    background-color: #ededed;
+    border: 0;
+    padding: 10px 30px 9px 30px;
 }
 
 .visually-hidden,
