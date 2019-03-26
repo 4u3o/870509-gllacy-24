@@ -2,7 +2,7 @@ var link = document.querySelector(".modal-link");
 var popup = document.querySelector(".modal-lining");
 var popap = document.querySelector(".modal-feedback");
 var close = document.querySelector(".modal-close");
-var imya = document.querySelector(".feedback-form-name");
+var forename = document.querySelector(".feedback-form-name");
 
 var form = popup.querySelector(".feedback-form");
 var message = popup.querySelector(".feedback-form-text");
@@ -19,7 +19,7 @@ try {
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
-    imya.focus();
+    forename.focus();
 });
 
 close.addEventListener("click", function (evt) {
@@ -29,11 +29,15 @@ close.addEventListener("click", function (evt) {
 });
 
 form.addEventListener("submit", function (evt) {
-    if (!message.value) {
+    if (!message.value || !forename.value) {
         evt.preventDefault();
         popap.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
         popap.classList.add("modal-error");
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem("forename", forename.value);
+        }
     }
   });
 
