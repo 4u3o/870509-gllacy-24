@@ -243,14 +243,14 @@
             </main>
             <section class="address">
                 <h2 class="visually-hidden">Карта</h2>
-                <img class="map" src="img/map_index.jpg" width="1200" height="430" alt="Карта">
+                <iframe class="map" src="https://yandex.ru/map-widget/v1/-/CBFXQGSKCD" width="1200" height="430" frameborder="1" allowfullscreen="true"></iframe>
                 <div class="positioner container">
                     <div class="address-ordering">
                         <p>Адрес главного офиса и офлайн-магазина:</p>
                         <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
                         <p>Для заказов по телефону:</p>
                         <p><b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-                        <a class="button" href="writeus.html">Форма обратной связи</a>
+                        <a class="button modal-link" href="writeus.html">Форма обратной связи</a>
                     </div>
                 </div>
             </section>
@@ -292,25 +292,28 @@
                     </p>
                 </div>
             </footer>
-            <section class="modal modal-feedback">
-                <h2>Мы обязательно вам ответим!</h2>
-                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                        <label class="visually-hidden" for="feedback-name">Имя</label>
-                        <input class="feedback-form-name" id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="feedback-email">Пароль</label>
-                        <input class="feedback-form-email" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа">
-                    </p>
-                    <p>
-                        <label class="visually-hidden" for="feedback-text">Сообщение</label>
-                        <textarea class="feedback-form-text" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..." rows="8"></textarea>
-                    </p>
-                    <button class="button" type="submit">Отправить</button>
-                </form>
-                <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-            </section>
+            <div class="modal-lining">
+                <section class="modal modal-feedback">
+                    <h2>Мы обязательно вам ответим!</h2>
+                    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                        <p>
+                            <label class="visually-hidden" for="feedback-name">Имя</label>
+                            <input class="feedback-form-name" id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="feedback-email">Пароль</label>
+                            <input class="feedback-form-email" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа">
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="feedback-text">Сообщение</label>
+                            <textarea class="feedback-form-text" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..." rows="8"></textarea>
+                        </p>
+                        <button class="button" type="submit">Отправить</button>
+                    </form>
+                    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                </section>
+            </div>
         </div>
+        <script src="js/popup.min.js"></script>
     </body>
 </html>
