@@ -13,7 +13,7 @@ var storage = "";
 try {
     storage = localStorage.getItem("message");
 } catch (err) {
-     isStorageSupport = false;
+    isStorageSupport = false;
 }
 
 link.addEventListener("click", function (evt) {
