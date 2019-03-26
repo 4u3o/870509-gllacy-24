@@ -1,5 +1,6 @@
 var link = document.querySelector(".modal-link");
 var popup = document.querySelector(".modal-lining");
+var popap = document.querySelector(".modal-feedback");
 var close = document.querySelector(".modal-close");
 var imya = document.querySelector(".feedback-form-name");
 
@@ -24,15 +25,15 @@ link.addEventListener("click", function (evt) {
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
+    popap.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function (evt) {
     if (!message.value) {
         evt.preventDefault();
-        popup.classList.remove("modal-error");
+        popap.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
-        popup.classList.add("modal-error");
+        popap.classList.add("modal-error");
     }
   });
 
