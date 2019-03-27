@@ -6,12 +6,13 @@ var forename = document.querySelector(".feedback-form-name");
 
 var form = popup.querySelector(".feedback-form");
 var message = popup.querySelector(".feedback-form-text");
+var email = popup.querySelector(".feedback-form-email");
 
 var isStorageSupport = true;
 var storage = "";
 
 try {
-    storage = localStorage.getItem("message");
+    storage = localStorage.getItem("forename");
 } catch (err) {
     isStorageSupport = false;
 }
@@ -20,6 +21,12 @@ link.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
     forename.focus();
+    if (storage) {
+        forename.value = storage;
+        email.focus();
+    } else {
+        forename.focus();
+    };
 });
 
 close.addEventListener("click", function (evt) {
@@ -39,7 +46,7 @@ form.addEventListener("submit", function (evt) {
             localStorage.setItem("forename", forename.value);
         }
     }
-  });
+});
 
 document.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
